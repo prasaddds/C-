@@ -1,0 +1,87 @@
+1)Multiple inheritance
+2)Ambiguity in multiple inheritence:- happens when we are accessing the member function/data member which is common in  both base classes. So when we are calling that function which is common in both classes,
+ compile dont know which one to call
+3)Ambiguity resolvance:- In the derived class we specify which one to call using scope resolution operator
+
+EX: void greet()
+       {  
+               base1::greet();
+       }
+
+4)This ambiguity can happen in case of simple inheritence also. But in that case, derived class function will override base class function. so we create object of derived class and access that function we 
+will access function of derived and ...
+5)concept of virtual base class (problem in heirarchial + multiple inheritence )
+6)In virtual base class only one copy of data member or member function will be passed
+class B:virtual public A
+{}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Constructors in Derived Class in C++
+1)We can use constructors in derived classes in C++
+2)If the base class constructor does not have any arguments, there is no need for any constructor in the derived class
+3)But if there are one or more arguments in the base class constructor, derived class need to pass argument to the base class 
+constructor
+4)If both base and derived classes have constructors, base class constructor is executed first
+->In multiple inheritances, base classes are constructed in the order in which they appear in the class deceleration. For example 
+if there are three classes “A”, “B”, and “C”, and the class “C” is inheriting classes “A” and “B”. If the class “A” is written 
+before class “B” then the constructor of class “A” will be executed first. But if the class “B” is written before class “A” then 
+the constructor of class “B” will be executed first.
+
+->In multilevel inheritance, the constructors are executed in the order of inheritance. 
+For example if there are three classes “A”, “B”, and “C”, and the class “B” is inheriting classes “A” 
+and the class “C” is inheriting classes “B”. Then the constructor will run according to the order of inheritance 
+such as the constructor of class “A” will be called first then the constructor of class “B” will be called and at the end 
+constructor of class “C” will be called.
+----------------------------------------------------------------------------------------------------------
+-->Special Syntax
+
+C++ supports a special syntax for passing arguments to multiple base classes
+The constructor of the derived class receives all the arguments at once and then will pass the call to the respective base classes
+The body is called after the constructors is finished executing
+Syntax Example:
+
+Derived-Constructor (arg1, arg2, arg3….): Base 1-Constructor (arg1,arg2), Base 2-Constructor(arg3,arg4)
+{
+….
+} Base 1-Constructor (arg1,arg2)
+
+---------------------------------------------------------------------------------------------------------------
+-->Special Case of Virtual Base Class
+
+The constructors for virtual base classes are invoked before a non-virtual base class
+If there are multiple virtual base classes, they are invoked in the order declared
+Any non-virtual base class are then constructed before the derived class constructor is executed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Case1:- 
+class B:public A//first base class,then derived class
+{
+	order of execution of constructor->first A() then B()
+};
+
+Case2:-
+class A:public B,public C//multiple inheritence, depends on which one is inherited first
+{
+	//order of execution of constructor first B(),then C(),then A()
+};
+
+Case3:-
+class A:public B,virtual public C
+{
+	//order of execution of constructor first C(),then B(),then A()
+};
+--------------------------------------------------------------------------------------------------
+Initiallization list in constructors:-used to intialize data members
+syntax for initialization list in constructor:
+constructor(argument-list):intitialization section
+{
+	assignment + other code
+}
+
+
+
+
+
+
+
+
+
+

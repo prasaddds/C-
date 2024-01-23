@@ -1,0 +1,131 @@
+/*Note:- Objectes are used to write and write in files. cin, cout are used to write on console*/
+1)Reading From File:-But whole content is not read
+	ifstream obj("sample.txt");
+	obj>>st;
+	cout<<st;
+2)Reading From File:-Whole content is read in this case
+	ifstream obj("sample.txt");
+	getline(obj,st);
+	cout<<st<<endl;
+3)Reading Whole Data From File:- 
+	ifstream obj("sample.txt");
+	while(obj.eof()==0)
+	{
+		obj>>st;
+		cout<<st<<endl;
+	}
+4))Writing to a file:-<<
+	ofstream obj("sample.txt");
+	cin>>st;
+	obj<<"My name is "+st;
+5)Writing to a file:- 
+	ofstream out;
+	out.open("sample.txt");
+6)file.good():-till u reach eof
+-->Exact match have highest priority
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1)A file is just like a container that can store data informaion. It can be defined as the collection of data bytes that are strored in secondary device
+2)File handling is a way of dealing with data of the file stored in secondary storage devices such as hard disk from a program. By using file handling, the c program can read or write data in the file located in hard disk
+3)c++ supports concept of file streams in order to perform operations on files
+4)stream that transfers data from file to program is known as input stream
+5)stream that transfers data from program to file is known as output stream
+6)In c++, we have ifstream, ofstream, fstream classes for file handling
+7)ifstream, ofstream, fstream classes are derived from fstream base class (declared in iostream header file)
+8)we can open file by using constructor of the class ifstream, ofstream or fstream or by using open() function
+9)The object of ifstream returns 0 if any error occurred in file operation
+10)open() function contains default values for the mode argument and thus we can use open function without mode argument
+11)Default values:-
+	a)ifstream:- ios::in - open file for reading only
+	b)ofstream:- ios::out - open file for writing only
+12)File opening modes:-
+	a)ios::in->open for reading only
+	b)ios::out->open for writing only
+	c)ios::app->append to end of file
+	d)ios::ate->go to end of file on opening
+	e)ios::binary->binary file
+13)fstream doesnot provide a mode by default, we must provide the mode explicitly while using an object of fstream class
+	a)When a file is opened for writing only and the file is not exisit, it will be created. And if it does exisit, the contents of original file will be deleted and a new file will be created
+	b)when a file is opened using ios::app mode and the file doesnot exist it will be created. And if it exists the current content of file is saved and new data is appened to it
+	c)It is allowed to combine two file opening modes using the bitwise or operator
+14)To close a file close() function is used
+15)All connnections to a file  get closed automatically when stream object expires or when the program terminates
+16)streams that are created using ifstream and ofstream doesnot necessarily required the mode operator
+17)seekg() function moves input(get) pointer to a specific location
+18)seekp() function moves output(put) pointer to a specifc location'
+19)tellg() function returns the current position of get or input pointer
+20)tellp() function returns the current position of put oroutput pointer
+21)put() function is used to write a single character to the file stream
+22)get() function is used to read a single character to the file stream
+23)write() function is used to write a block of data to the file stream'
+24)read() function is used to read a block of data from the file stream
+25)the objects of fstream class are capable of handling both input and output simultaneously
+26)eof() function returns(non zero value) if end of file is encountered or false otherise
+27)fail() function return true when an input or output operations gets failed or return false otehrwise	
+---------------------------------------------
+ios::in | ios::out - error if file is not tehre
+ios::in | ios::out | ios::trunc - creates file if not there
+ios::in | ios::out | ios::app - creates oen if file is not there
+ios::binary | ios::in |ios::out | ios::trunc - created if file is not there
+--------------------------------------------------------------------------------------------------------------------------------
+1)c++ supports concept of generic programming via templates
+2)Templates allow us to create a group of classes or a group of functions to handle different data types
+3)with the help of templates we can create a function or a class that is capable in dealing with different type of data i,e, we can call a function with integer values, floating point values or character etc
+4)A class that is created from a class template is known as template class
+5)A function that is created from function template is known as template function
+6)Template eliminates the code duplication for handling different type of data by allowing us to create a single function or class that is capable in dealing with different data type
+7)use of templates doesnot reduce the amount of RAM used by program i.e. program takes same amunt of RAM whether we use the template mechansim or actually write seperate functions
+8)use of templates save our coding efforts(code writing only)
+9)Although macros are used in place of templates for handling different data type but templates are better tyan macros because macros doesnot perform any type checking
+10)Template functions can be overloaded
+11)we can inherit a new template from existing one
+12)Template function may have default arguments
+13)The member function of a template must be defined as function template(when member function is defined outside the class)
+14)It is possible to define a class template with multiple generic parameters
+15)It is possible to define a function with multiple generic parameters
+16)When we define a funxtion template the compiler does not generate any code as it does not know what data type the function will be working with. the compiler decides how to compile the function according to
+ the data type used in function calls argument
+17)The template arguments must match in the template function calling
+18)we can specify default types for the template class daata types
+19)For a template function to work it is mandatory that its defintion shold always be present in the same file from where it is called
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

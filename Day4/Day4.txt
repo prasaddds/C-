@@ -1,0 +1,46 @@
+
+
+
+
+4)Copy constructor
+5)Copy constructor
+6)Destructors
+7)Inheritence:- feature of OOPS
+->We can reuse class properties in other class through inheritence
+->In  c++ we can reuse a class and add additional features to it
+->Reusing class saves time
+->Reusing already tested and debugged class will save a lot of effore of developinmg and debugging the same thing again
+->concept of reusability is supported using inheritence
+->we can reuse teh properties of an exisisting class by inheriting from it
+->the exisiting class is called base class
+->the new class which is inherited is called derived class
+1)mulitip;e:-derived class with more than one base class
+2)hierarchial:-several derived classes from single base class
+3)single:-deruiived class with only base class[one parent,one child]
+4)multilevel:-deriving a class from already derived class
+5)Hybrid:-combination of multiple and multilevel minheritence
+------------------------------------------------------------------------------------------------------xxxxxxxxxxxxxxxxxxx-------------------------------------------------------------------------------------------------
+single inheritnce:-
+Base class can have constructors, variables, methods:- through object of base class we can call them
+Derived class can have constructor,variables,methods:- through object of derived class we can access them
+when derived class inherited base class then object of derived class can access variables, methods, constructors of derived class and base class also.
+so there is no need to create object of base class.even we have inheritence we cannot access base class members from derived class
+-->once object is created for derived class, it will call forbase class  constructor implicitly then derived class constructor
+-->then we can access members of base class through derived class objects
+-->inherited with the help of colon
+---------
+when object is created for derived class it will call for default constructor of base class then for derived class 
+------------------------------------------------------------------------------------------------------xxxxxxxxxxxxxxxxxxx-------------------------------------------------------------------------------------------------
+9,15)Single inheritence
+16)Single inheritence and how can we use private data members indirectly
+17)Protected access modifier
+21)multilevel inheritence:- 
+1)if we are inheriting b from a and c from a then it is called multilevel inheritence
+2)ABC is called inheritence path
+3)
+------------------------------------------------------------------------------------------
+			  public derivation  private derivation  protected derivatiom
+	1.private members:     not inherited       not inherited             not inherited
+	2:protected members:    protected        private                        protected
+	3:public members:       public                  private                        protected
+-------------------------------------------------------------------------------------------------

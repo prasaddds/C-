@@ -1,0 +1,39 @@
+1.cpp:- multiple inheritence
+------------------------------
+------------------------------------------------------------------------------------------
+			  public derivation  private derivation  protected derivatiom
+	1.private members:     not inherited       not inherited             not inherited
+	2:protected members:    protected        private                        protected
+	3:public members:       public                  private                        protected
+-------------------------------------------------------------------------------------------------
+2.cpp:- ambiguity in inheritence
+3.cpp:-resolvence of ambiguity
+5.cpp:-override
+6.cpp:- Virtual base class
+9.cpp:-Constructor in derived class
+11.cpp:-initialization list in constructors
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,269 @@
+1)Break, continue
+2)Pointer[p1+5,p1-5,*p1+*p2,*p1 * *p2,*p1 + 2, *p1/*p2 + 5,p1+1(pointer not moved)],Arrays. pointer is a derived data type which is used to strore address of a variable
+3)structure(Its a combination of hetrogeneous type of elements), typedef(used for defining users data type,typedef is used for defining our own data type and typedef is a kw used to assign new name to existing DT)
+4) unions(can handle one member at one time, shares common memory location),enum is user defined data type which can be assigned some user defined data types.
+5)Data memberes inside structure can be variables, nested structures, arrays,pointers etc...
+6)call by reference using pointers
+7)15.cpp,28.cpp,29.cpp,
+
+2.cpp:-pointers
+3.cpp:-arrays and pointers
+a)*(p++)//value is printed, then pointer will move by one step forward
+b)*(++p)//pointer will forward by one step and hen value is printed
+c)*p=*p+2//changes the value ,+,-,*,/,% were allowed
+d)*(p+1)//no change in pointer but value at that position willl be prined
+e)p=p+1//moves pointer +,-, are allowed
+4.cpp:-
+---------------------------------------------------------------------------
+->structure tag name, struct members and structure functions, structure variables
+->In c programming language we generally cannot declare functions inside structures which is false in case of c++
+--------------------------------------------------------------------------
+11)simple structure
+12)nested structure
+13)array variables inside structure[array within structure]
+14)pointers inside main function
+15)pointers inside main function
+16)Compact form of structure[tag is optional and structure varibles will be before comma]
+17)we have a scope to declare structure variables inside main if we give tag name
+---------------------------------------------------------------------------
+the member names within a particular structure must be distinct from one another
+member name can be same as the name of a variable defined outside the structure
+structure variab;es can be inside main function/before  ; [tag is optional in t5his case]
+scope of structure is restricted to that function if it is declared inside function
+----------------------------------------------------------------------------------
+18)we can assign structure variable directly to other structure varable if data types in both structures were same
+we cannot compare structures but we can assign. we can compare individual members of a structure
+19)array of structures
+20)
+------------------------------------------------------------------------------
+typedef:-user can define his own data type using typedef
+21)typedef basic
+22)typedef(giving values without using . operator)
+23)
+24)parameter passing in a function as structures
+25)we can return structure from function 
+->Direct arithemetic operations  is not possible with structure variables
+---------------------------------------------------------------------------------
+functions:-arguments,formal arguments
+if function prototype is not there, we have to give function definition before using that function in main
+->int sum(int,int);//acceptable
+->void g(void);//acceptable
+->actual parameters(in main function)
+->formal parameters(in function efinition)
+------------------------------------------------------------------------------------
+24)call by value, call by reference using pointers
+25)call by reference using references
+------------------------------------------------------------------------------
+27)inline:- 
+generally in functions values of actual parameters will be copied to formal parameters every time we call
+that function. But in case of inline, there is no need of it.
+->function call  is replaced by function definition, so to avoid copying every time
+->inline is used to overcome overhead in functions
+->static variable intialized only once
+--------------------------------------------------------------------------------------
+28)defualt arguments:-if value for arguments are not coming from function, then default arguments will be used
+else actual values will be used
+29)constant arguments:-
+---------------------------------------------------------------------------------
+30)Function overloading
+31)oops:-watch other video after completion of this course
+----------------------------------------------------------------------------
+pointers:-following are illegal
+->&123;
+->&arr;
+->&(a+b);
+*->indirection operator
+*p->vlue of a variable
+-----------------------------------------------------------------------
+enum:-
+26)25)
+Enumerated data type is a user defined type which is used to assign names to integral constatnts coz, 
+names are easier to handle in program.
+if we donot assign values to enu m names the, automatically compiler will assign values to them starting from 0
+need of enumeration:- 
+1)enum can be declared in the local scope
+2)enum names are automatically initiallized by the compiler
+truths:-
+two or more names can have same value
+we can assign values in any order. all unassigned names will get value of previous name+1
+only integral values are allowed
+all enum constant must be unique  in their scope
+------------------------------------------------------------------------------
+27)passing structure to a function
+28)return values from function
+
+
+Opeartions on pointers:- 
+a)adding integer to pointer
+b)subract integer from pointer
+c)subtract one pointer from other pointer
+
+operations not allowed on pointer:- 
+a)addition of pointers
+b)multiply/ divide a pointer in an expression
+
+Structure is user defined data type which is a collection of hertrogeneous data type. c++ structure can have data members, member functions, pointers,references....
+typedef is user defined data type which is  used for defining our own data type and typedef is a kw used to assign new name to existing DT
+Union is user defined data type which shares a common memory locations and it is useful when we want only one value in memory
+Enum, short for "enumerated," is a data type that consists of predefined values. A constant or variable defined as an enum can store one of the values listed in the enum declaration.
+
+
+1)structure provides a way of grouping varibles of different data types uder a single name. It is a way of creating user defined data type
+2)For declaring structure we use struct
+3)The name of s atructurfe is called tag and the fields of a structure is known as structure elments or members
+4)We can access membersof a strcutre using dot operator and selection operartor
+5)we cannot initialize members of structure inside structure template
+6)We may declare a structure variable at the time of defintion of a strcutreu by placing in between closing brace and semicolon
+7)The tag name of structure is optional
+8)Between two members of a stucture some space in byte is kept unoccupied which is known as slack byte
+9)We can assign the data of one structure to other structure variable of same type using  assignment operator
+10)c++ doesnot permit any relational operations on structure variables i.e, we cannot perform equality check between two structure variables using comparsion operator
+11)c++ supports array of structure variables
+12)c++ supports nesting of structures
+13)structure varuables is used as structure member inside other structure
+14)We can pass structure variable to the function argument
+15)We cannot use a structure variable as a member of its own struct type variable
+16)We cannot assign structure of one type t the structure of other type
+17)passing structure variable to a functions by pointer is  more efficient as compare with passing by value
+18)c++ allow pointer to structure
+19)structure elements are always arranges in contigious memory allocation
+20)In c++ we may define function inside structure
+21)struactue member are bu default private
+22)members of structure are public by default but we can ccess specifieres in order to modify accessability of members
+23)Concept of union adopted from structure
+24)For declaring union we use union keyword
+25)The member of structure has its own storage allocation
+26)All member of union use the shared/common mmeory location
+27)At  any point of time only one union member contains valid data
+28)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1)pointer is a special type of variable that stores address of a variable
+2)for declaring pointer we use * along with the data type and variable name
+3)pointer helps in DMA
+4)pointer are more efficient in handling arrays
+5)pointer provide flexibility, more power, increase in execution speed of c++ program
+6)* is known as indirection operator or dereferncing operator
+7)pointer variable is initialized with garbage value by default
+8)A single pointer variable can point to different variable in different statements of the program
+9)assigning constant to a pointer giver unpredicted result
+10)the value of a variable cannot be assigned to a pointer
+11)storeing adress of one type into pointer of another type gives incorrect result
+12)we can create a pointer that points to other pointer
+13)c++ supports generic/ void pointer
+14)we can perform addition or subtraction on pointer variables. when we do so pointer points to next valid address
+15)we cannot perform multiplications or divisions on a pointer
+16)we can compare pointers of same using reational operators
+17)Two pointer variables cannot be added
+18)c++ supports pointer to a function
+19)we can pass pointer to a function as argument
+20)we can create an array of pointer variables
+21)we can declare pointer to a structure
+22)we can create pointer to a class
+23)-> used to access members of a class with the pointer objects
+24)A single pointer variable is used to point objects of different classes
+25)we can declare pointer as a class member
+26)this pointer is an object pointer that points to currently calling objects
+
+
+27)void pointer cannot be derferenced as it has no object
+28)pointer that points to null or noyhinmh is known as null pointer
+29)uninitilazed pointer is also known as wild pointer
+30)when a pointer is pointed to a memory location of deleted varuables is known as dangling pointer
+41)wild pointer, NULL pointer,Generic ponter, Constant pointer, Dangling pointer
+	a)uninitialized pointer is known as wild pointer. points towards anonymous memory location location. solution is to initialize wild pointer with some valid address value
+	b)Null pointer points to zero as an address value or it points no where initially but we can assign some valid address to null pointer in later stages of program. 
+	->we cannot dereference null pointer and we csn asssign 0 as an address value if we dont know the addreess initially. It is better to have a null pointer instead of wild pointer
+	c)Generic pointer(void). declared using void keyword. can point to any type of variable. while dereferencing void pointer typecasting is must. 
+	d)constant pointer points toward only one memory location in its entire life time. If we try to change the address hold by pointer, compilation error may raise
+	e)dangling pointer is a pointer which is pointing towards already deleeted memory location. solution is assign the pointer to the null valur.
+42) We cannot add, multiply, divide,modulo two pinter vaiables
+43)We cannot modulo, mutiply, divide a constant from pointer variabe
+44)We can increament or decreament a pointer variable
+45)we can add or sub a constrant from a pointer variable
+46)We can subtract two pointer if they are pinting towards samr arrsy
+47)We can compare two pointer if they points towrds same array
+48)
+
+--------------------------------------------------------------
+2.cpp:-pointers
+3.cpp:-arrays and pointers
+a)*(p++)//value is printed, then pointer will move by one step forward
+b)*(++p)//pointer will forward by one step and hen value is printed
+c)*p=*p+2//changes the value ,+,-,*,/,% were allowed
+d)*(p+1)//no change in pointer but value at that position willl be prined
+e)p=p+1//moves pointer +,-, are allowed
+4.cpp:-
+---------------------------------------------------------------------------
+11)simple structure
+12)nested structure
+13)array variables inside structure[array within structure]
+14)pointers inside main function
+15)pointers inside main function
+16)Compact form of structure[tag is optional and structure varibles will be before comma]
+17)we have a scope to declare structure variables inside main if we give tag name
+---------------------------------------------------------------------------
+the member names within a particular structure must be distinct from one another
+member name can be same as the name of a variable defined outside the structure
+structure variab;es can be inside main function/before  ; [tag is optional in t5his case]
+scope of structure is restricted to that function if it is declared inside function
+----------------------------------------------------------------------------------
+18)we can assign structure variable directly to other structure varable if data types in both structures were same
+we cannot compare structures but we can assign. we can copare individual members of a structure
+19)array of structures
+20)
+------------------------------------------------------------------------------
+typedef:-user can define his own data type using typedef
+21)typedef basic
+22)typedef(giving values without using . operator)
+23)
+24)parameter passing in a function as structures
+25)we can return structure from function 
+->Direct arithemetic operations  is not possible with structure variables
+---------------------------------------------------------------------------------
+functions:-arguments,formal arguments
+if function prototype is not there, we have to give function definition before using that function in main
+->int sum(int,int);//acceptable
+->void g(void);//acceptable
+->actual parameters(in main function)
+->formal parameters(in function efinition)
+------------------------------------------------------------------------------------
+24)call by value, call by reference using pointers
+25)call by reference using references
+------------------------------------------------------------------------------
+27)inline:- 
+generally in functions values of actual parameters will be copied to formal parameters every time we call
+that function. But in case of inline, there is no need of it.
+->function call  is replaced by function definition, so to avoid copying every time
+->inline is used to overcome overhead in functions
+->static variable intialized only once
+--------------------------------------------------------------------------------------
+28)defualt arguments:-if value for arguments are not coming from function, then default arguments will be used
+else actual values will be used
+29)constant arguments:-
+---------------------------------------------------------------------------------
+30)Function overloading
+31)oops:-watch other video after completion of this course
+----------------------------------------------------------------------------
+pointers:-following are illegal
+->&123;
+->&arr;
+->&(a+b);
+*->indirection operator
+*p->vlue of a variable
+-----------------------------------------------------------------------
+enum:-
+26)25)
+Enumerated data type is a user defined type which is used to assign names to integral constatnts coz, 
+names are easier to handle in program.
+if we donot assign values to enu m names the, automatically compiler will assign values to them starting from 0
+need of enumeration:- 
+1)enum can be declared in the local scope
+2)enum names are automatically initiallized by the compiler
+truths:-
+two or more names can have same value
+we can assign values in any order. all unassigned names will get value of previous name+1
+only integral values are allowed
+all enum constant must be unique  in their scope
+------------------------------------------------------------------------------
+27)passing structure to a function
+28)return values from function

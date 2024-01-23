@@ -1,0 +1,13 @@
+1)new,delete keywords
+2)new,->
+5)pointer to structure
+6)this pointer
+7)
+8)polymorhisim:-
+9)pointers to derived class in c++[run time polymorphisim]
+10)
+11)virtual function:-
+12)
+13)virtual functions example
+14)Abstract base class and pure virtual functions
+15)

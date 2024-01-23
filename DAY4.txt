@@ -1,0 +1,210 @@
+1)constructor is called as soon as object is created
+2)Constructor with default arguments is possible
+3)constructor overloading, if inheritence is not there, we can easily guesss which constructor will be called 
+4)Dynamic initialization of constructor:- After giving input, it will decide which constructor to call
+5)Default constructor is not needed if we pass all parameteres at the time of creating object
+6)Copy constructor:- ClassName Object(Object1); className(ClassName &obj);
+No problem even if we remove copy constructor 
+7)Different ways of calling copy constructor
+
+
+	number x,y,z(45),z2;//if all parameters are specified then default cosructor is not nneded
+	x.display();
+	y.display();
+	z.display();
+	number z1(x);//copy constructor invoked
+	z1.display();
+	z2=z;//copy constructor not called
+	number z3=z;//copy constructor invoked
+	return 0;
+----------------------------
+#include<iostream>
+using namespace std;
+class number
+{
+	int a;
+	public:
+	number(){a=0;}//default constructor is mandatory
+	number(int num)
+	{
+		a=num;
+	}
+	number(number &ob)//will work properly even this code is removed
+	{//if copy constructor is not there, compiler will supply its own copy constructor
+		cout<<"copy constructopr called"<<endl;
+		a=ob.a;
+	}
+	void display()
+	{
+		cout<<"a's value is "<<a<<endl;
+	}	
+};
+int main()
+{
+	number x,y,z(45),z2;
+	x.display();
+	y.display();
+	z.display();
+	number z1(x);//copy constructor invoked
+	z1.display();
+	z2=z;//copy constructor will not called
+	number z3=z;//copy constructor called
+	return 0;
+}
+---------------------------
+example obj1(50);
+example obj2(obj1);
+---------------------------
+example obj1(50);
+example obj2;
+obj2=obj1;
+-------------------------
+example obj1(50);
+example obj2=obj1;
+-------------------------
+8)Destructor called automatically when an object is destroyed
+9)Constructors object is automatically woke up when an object is created
+--------------------------------------------------------------------------------------------------------------
+1)constructor is a special member function that gets called automatically whenever an object of its class is created
+2)constructor is responsible for the initialization and memory allocation for thr objects of its classes
+3)constructor has same name as class name and have no return type even void
+4)when no constructor is defined in the class the compiler itself build one, knwn as implicit r default constructor
+5)constructor with no default arguments is known as default constructor
+6)generally constructor should be declared in public
+7)constructors can be defined inside as well as outside a class
+8)constructors cannot be inherited
+9)we can call constructor of base class from derived class
+10)In c++, constructor may have default constructors
+11)constructors cannot be declared as virtual
+12)we cannot refer to address of any constructor
+13)constructor can make implicit call to new and delete operators when memory allocatin is required
+14)constructor taking arguments is known as parameterized constructor
+15)we can call parameterized constructors by two ways:- 
+	a)implicit calling	[demo obj(1,2)	obj.show()]
+	b)explicit calling	[demo d2=demo(10,20)	d2.show()]
+16)constructors can be overloaded
+17)constructors can take a reference to its own class as a arameter, this type is known as copy constructor
+18)constructor can take parameters of any type except that of the class class but it may take a reference to its own parameter
+19)compiler supplies default copy constructor
+20)when an object is created and initialized at the same time, copy constructor gets called
+21)when a derived class constructor is created, its base constructor is called before its own onstructor
+22)constructors of virtual base class is invoked before any non virtual base class
+23)When an object is passed or returned to/from a function by value, copy constructor called automatically
+24)Destructor is a special member function that is used to destroy or deallocates the objects that are called by the constructor
+25)Destructor have the same name as the class preceded by ~
+26)Destructors cannot takeany arguments and doesnot return any value
+27)Destructors are called in reverse order as off the order of constructor calls
+28)constructors may be declared as private. objects of a class having a private (non-public) constructors cannot be called directly
+29)Destructor an be declared as private
+30)when a class have private constructors or destructors then only dynamic objects of that class can be created
+31)Destructors can be declared as virtual
+32)Destructors can be virtual
+------------------------------------------------------------------------------------------------------------------
+
+
+10)Inheritence(for reusability- DRY- Don't repeat youself
+11)Single inheritence
+12)Multiple inheritence(mutiple base classes)
+13)Hierarchial inheritance(multiple derived classes)
+14)Multilevel inheritence
+15)Hybrid inheritance
+-------------------------------
+Private data members are never inherited
+private visibility mode: private members of the base class becomes private members of the derived class
+public visibility mode: public members of the base class becomes public members of the derived class
+class newClassName : visiilityMode BaseClassNAme
+Protected data members are same as private data members but they can be accessed outside the class
+
+------------------------------------------------
+
+------------------------------------------------------------------------------------------
+			  			public derivation  private derivation  		protected derivatiom
+	1.private members:     not inherited       not inherited             		not inherited
+	2:protected members:    protected        		private                        protected
+	3:public members:       public                  private                        protected
+-------------------------------------------------------------------------------------------------
+Compiler will not create default constructor if we have any other constructor in the class
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1)When a class inherits or acquires the properties of other class , this is know as inheritence
+2)parent class/ base class/superclass
+3)child class / derived class/ base class
+4)It provides the concept of reusability as it is a process of creating new classes from existing classes
+5)There are five type of inheritance
+6)The private data members of a class are not inheritable
+7)We can derive the properties of a base class in one of the three visibility modes: public, private or protected
+8)When base class is publicaly inherited by derived class, the public members of base class are public members of derived class
+9)
+10)multipath inheritence (combination of Heirarchial and multiple inheritence)
+
+
+11)In multi path inheritence the common base class is declared as virtual base class inorder to avoid duplication of inherited members 
+12)construtors and destructors never get inherited
+13)polymorphisim means many forms
+14)there are two types of forms:- compile time polymorphisim, run time polymorphisim
+15)CTP achieved using function overloading and operator overloading
+16)RTP achieved using function overriding via virtual functions'
+17)In CTP function overloading which overloaded version of the function get invoked decided at compile time
+18)In RTP which overloaded version of function gets invoked is decided at run time
+19) RTP is achived only when a virtual function is accesssed through a pointer to the base class. If we use dot operator along with object name to call a virtual function, then RTP is not achived
+------------------------
+
+
+
+
+4)Copy constructor
+5)Copy constructor
+6)Destructors
+7)Inheritence:- feature of OOPS
+->We can reuse class properties in other class through inheritence
+->In  c++ we can reuse a class and add additional features to it
+->Reusing class saves time
+->Reusing already tested and debugged class will save a lot of effore of developinmg and debugging the same thing again
+->concept of reusability is supported using inheritence
+->we can reuse teh properties of an exisisting class by inheriting from it
+->the exisiting class is called base class
+->the new class which is inherited is called derived class
+1)mulitip;e:-derived class with more than one base class
+2)hierarchial:-several derived classes from single base class
+3)single:-deruiived class with only base class[one parent,one child]
+4)multilevel:-deriving a class from already derived class
+5)Hybrid:-combination of multiple and multilevel minheritence
+------------------------------------------------------------------------------------------------------xxxxxxxxxxxxxxxxxxx-------------------------------------------------------------------------------------------------
+single inheritnce:-
+Base class can have constructors, variables, methods:- through object of base class we can call them
+Derived class can have constructor,variables,methods:- through object of derived class we can access them
+when derived class inherited base class then object of derived class can access variables, methods, constructors of derived class and base class also.
+so there is no need to create object of base class.even we have inheritence we cannot access base class members from derived class
+-->once object is created for derived class, it will call forbase class  constructor implicitly then derived class constructor
+-->then we can access members of base class through derived class objects
+-->inherited with the help of colon
+---------
+when object is created for derived class it will call for default constructor of base class then for derived class 
+------------------------------------------------------------------------------------------------------xxxxxxxxxxxxxxxxxxx-------------------------------------------------------------------------------------------------
+9,15)Single inheritence
+16)Single inheritence and how can we use private data members indirectly
+17)Protected access modifier
+21)multilevel inheritence:- 
+1)if we are inheriting b from a and c from a then it is called multilevel inheritence
+2)ABC is called inheritence path
+3)
+------------------------------------------------------------------------------------------
+			  public derivation  private derivation  protected derivatiom
+	1.private members:     not inherited       not inherited             not inherited
+	2:protected members:    protected        private                        protected
+	3:public members:       public                  private                        protected
+-------------------------------------------------------------------------------------------------
+when we are calling parameterized constructor dfault constructor ill not be called
+when we are xalling parameerzd constructor of derived class, its base class should have dfault constructr if it has parameterized constrctor
+When inheritence is not there, we can directly call parameteried construtor and base class is no neded
+
+programmer obj(5);//w are calling paamaterized constructor and function with same object
+obj.getValues();
+
+when we arecalling  default constructor of a derived class then, there is no need of default constutor in base class
+protected data members can be accessed iside class only and not even outside the clsss. i.e; in main
+If there is no other constructor in  class, then default construcor will be called
+
+
+
+
+

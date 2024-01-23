@@ -1,0 +1,49 @@
+1)we can directly access structure variables and methods, there is no restriction
+2)nesting of member functions[we can access private function through nesting of member functions without 
+creating object for private member function]
+3)memory allocation and  using arrays in classes
+4)static data members and methods :- shares a common variable
+
+a static variable inside a class should be initialized explicitly by the user using the class name and
+scope resolution operator outside the class
+5)6)
+7)Array of objects
+8)
+9)passing objects as function arguments
+10)friend functions:-they allow functions to access private data from outside the class 
+	a)friend return_type function_name(complex o1,complex o2);//should be in class from where we are accessing private members
+	means that non member - sumcomplex function is allowd to do anything with private data mambers
+	---------------------------------------
+	friend data_type function_name();	
+	----------------------------------------
+	class_name function_name();//syntax of friend function outside class
+	-----------------------------------------
+	b)since it is not in the scope of the cl;ass, it cannot be called from the object of that class. c1.sumcomplex() is not allowd
+	c)can be invoked without the help of any object
+	d)usually contains  objects as arguments
+	e)can be declared inside private or public part
+	f)cannot access the members directly by their name and need objcet_name.member_name to access any member
+11)def accessing abc private members
+
+
+class abc;//class name  from which[def] we wanna access private data members
+class def
+{//this is the class in which we declared a function which access private members from abc};
+class abc{give datamembers,memberfunctons and below syntax};
+
+---------------------------------------------------------------------
+friend int abc::sumRealcomplex(complex o1,complex o2); //allow sumRealComplex from abcclass to use data members from 
+this should be a class from which we wanna access private members
+---------------------------------------------------------------------------
+function syntax:-
+int def::function_name(complex o1,complex o2)
+
+{
+	return o1.a+o2.a;
+}
+15)friend class def; //makeing whole class as friend
+-------------------------------------------------------------------------------
+16-20:-friend functions
+22)constructor
+23)default constructor
+24)

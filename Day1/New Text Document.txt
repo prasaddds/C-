@@ -1,0 +1,266 @@
+1)Introduction of c++:- 
+simple, rich library support, oops, pointers, compiled language, high spped of execution, object oriented programming, platform independent
+2)Header files vs Libraries:-.h,.lib (available inside include sub directory, available inside lib sub directory), (we can include them using include command whereas we cannot include libraries,
+ they are included in last stage using linker) iostream. Header files contains functions like printf, scanf. But actual code was inside librararies. Declaration inside header file,Definition inside library.
+human readable, non human readable
+3)Basic structure of c++
+4)<< , >>, :: 
+5)#include is a specific preprocessor command that effectively 
+copies and pastes the entire text of the file, specified between
+the angle brackets, into the source code.
+6)HLL VS LLL:- easy to understand, simple to debuag, maintain. human friendly, portable, compiler needed,speed of execution 
+7)Variable, Data types and its kinds
+8)Global variables vs Local variables
+9)Scope:- The region where the existence of a variable is valid
+10)Operators
+11)Type catsing:- conversion of data type of a variable from one tpe to other. Implicit(automatic type conversion) and explicit(type casting, done by assignment or by using cast operator static_cast<int>(f)).
+ lower data types are converted into higher data types in an expresiion. 
+12)constants
+13)Manipulators:- Manipulators are helping functions which helps in changing format of data. 
+->cout<<std::boolalpha<<endl,cout<<std::noboolalpha[used to print true, false]
+->hex,oct,dec
+->showbase
+->noshowbase
+->showpos
+->noshowpos
+->uppercase
+->nouppercase
+->setw(5)
+->setfill('*')
+->left
+->right
+14)Precedence and associativity
+15)control structures :- sequential, selection, repetative
+16)endl flushes the buffer
+17)Escape sequences
+18)inline function
+19)call by refeernce 
+20)Difference between c and c++:- type of language, number of keywords, polymorphisim, inheritence, encapsulation, data and funcations are seperated, 
+use of functions inside structures, Data hiding, Virtual and friend functions, DMA functions, functions used for inut output, access modifiers
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+c++ prgrams execution starts from the main function
+cout represents standard output stream in c++
+cin represnts standard input stream in c++
+cin and cout are predefined objects in c++
+The operators << and >> are overloaded bitwise operatots
+<< - insertion or put-to operator
+>>extraction or get from operator
+c++ supports reference variable
+A reference variable provides an alternative name for a variable
+concept of namespace is introduces by c++
+1)c++ supports many oop features like objectsm polymorphisim, encapsulation, data abstraction, dynamic binding
+2)anci c++ include many new keywords such as try, catch, class, mutable, inline etc
+3)Although c++ is oop language we can create programs in c++ without any class
+4)c++ allows declarartion of variable anywhere in the scope
+5)c++ supports operator overloadung
+6)c++ manipulators helps in formatting data 
+7)c++ contains more than 60 keywords
+8)c++ provides exception handling
+9)c++ provide data security
+10)c++ provides different visibility modes: public, private, protected
+11)we may assign float value to integer variable and vice virsa
+12)A variable is a memory location that is used to store data value. variable has ots size, range, name(identifier) and address
+13)c++ supports initialization of multiple variables in one statement
+14)in c++,integers and character are allowed to express as hexadecimal or octal
+15)identifiers in c++ are case senitive 
+16)identifiers first character must be an alphabet or underscore
+17)Exceept _ identifier must not contain any other symbol
+18)any aithematic operation bw two integers gives integer result
+19)any aithmetic operation between two floats gives floating point result
+20)Any airthmetic operation between one integer and float gives floating point result
+21)in c++ we cannot display division % to floating point values
+22)while performing modulo division, the sign of result is always the sign of first operand
+23)Relational operators gives logical values as output
+24)we cannot apply increament and decreament operators to constants
+25)The operator operates on two operands is known as binary operator
+26)c++ doesnot have any operator for exponentiation
+27)Bitwise operators may not be applied float or double values
+28)typedef is used to assigning new name to exisiting data type
+29)keyword const is used to make the value of a variable constant
+30)keyword volatile is used to tell the compiler that the value of a variable may be changes by some external sources any time
+
+-----------------------------------------------------------------------------------------------------------------
+sorage classes:- automatic, register, external(global), static
+scope is defined as region in which variable is available for use
+lifetime of a variable may be defined as the duration of time upto which a variable exisits in the memory during execution
+----------
+1)auto is used to declare an automatic variable
+2)any variable inside a function without storage class is an automatic variable by default
+3)automatic variables are local to function , they are created when a function is called and destroyed automatically on the function exit
+
+4)keyword register is used to declare register variable
+5)If regsiter variable cannot get the register to store the value then they automatically caonverted into automatic variable
+6)we cannot get the address of register variable using address of operator
+
+7)External or global variables are alive throughpur the program and acccessed by any function in the program
+8)As the external variable is accessible from all functions , any function can use it and change its values,in this way, subsequent functions always get updated value of global variable
+9)The local varuables will have precedence over global varaibles, if both variables have the same name
+10)global or external variables may be declared as static
+11)static variables aredeclared using static
+
+12)lifetime of static variable is same as lifetime of program
+13)static variables are accessible by the function inside which it is declared
+14)stati variable initializedd only once
+15)visibi;ty of static variable is same as the visibility of automatic variable and life time is same as life time of global variable
+16)in c++, static variables can be initialized with a non constant expression
+
+17)Default value for automatic and resgister variables is garbage and for externl and static variable is 0
+18_We cannot define a variable with more than one storage class
+19)We cannot use static and auto storage class as the function argument
+20)If we not mention any datatype with storage class then it will be treated as integer by default
+21)we may use :: to access lobal variable when we have a local variable having same name as global variable
+
+22)keyword extern is used to tell the compiler that variable is declared already elsewhere and no need to create storage space for it
+23)mutable keyword is used to specify that the meber may be updates or modified even if it is member of constant object
+24)Mutable specifier cannot be used with variable that is declared as static or const
+
+25)static data member of class must be defined outside the class to allocate memory
+26)All teh static data member are initialized to  0 by default
+--------------------------------------------------------------------------
+1)in if-else statemtn only one portion of code is executed i.e; if the condition is true then code blok of if is executed. If it is false else block is executed
+2)we may use if without else
+3)we can use conditional operator to replace if elase statemnts
+4)any non zero number is treated as true
+5)In switch statment only integer or character expression is allowed
+6)switch case: when we use character constatnts as switch case they are treated as integers
+7)switch statment doesnot support float point values
+8)switch case: all cases must be constant or constant expressions i.e; variables are not allowed as case value in switch
+9)switch case: only one default case is allowed in switch
+10)no case label can have same value
+11)default case is optional
+12)break statement in switch is optional.
+13)ordering of cases in unimportant, u can define cases in any order
+14)nested switch statemnts are supported by c++
+15)nested switch may have same constants
+16)goto is an unconditional statement in c++ and by using it we can perform bacjward as well as forward jump in our program
+17)for and while loop are entry controlled loop because teh test condition is evaluated first and then the code is executed
+18)for loop consists of three parts i.e, initialization, condition, and increament
+19)for loop supports variatiosn but it must have basic structure retained i.e, it must have two semicolons
+20)Empty test condition is not allowed in while loop
+21)do while is a post test condition loop and it will execute atleast once even if its condition is false
+22)do while loop is an exit controlled loop because the code of the loop is execured first and then teh test condition is evaluated
+23)do while loop executes at least once as it is an exit controlled loop
+24)do while loop os basically used in menu selection functions because one will always want a menu function to execute atleast once
+25)keyword break is used to get out of the switch statemtn
+26)keyword break is also used with thr loop to break/ter,minate the execution of the loop even if the loop test condition is true
+27)break used in a swtch / loop will affect only that switch /loop, it doesnt affect any switch or loop in which it is nested
+28)continue is used to come out of the loop for a particukar iteration , when continue executes the programs control goes to begining of the loop by skipping further statements
+29)continue does not work with switch statement. However if switch us placed inside any loop then continue in switch case is valid and willcontinue loop
+30)
+--------------------------------------------------------------------------------------------------------------------------------
+1)Array is a collection of variables having similar data type
+2)Array elements are always storde in contigious memory locations
+3)Array data type is derived data type and is derived from primary data type
+4)Array indexing always starts from 0
+5)The size of an array should be numeric or a symbolic constant
+6)Referncing array element outsid the declared limits will not give error but produce unpredicatble result
+7)array elements contain garbage values if we cannot initialize array at the time of initalization
+8)If we declare atleast one elemnt of array at te time of arry declaration, then rest of elements are initilized by zero automatically
+9)it is a compile time error if we initialize more elements than size of an array
+10)c++ doesnot perfrom any bound checking
+11)name of array without any index specify its base address i.e. the address of first element
+12)we cannot compare to arrays using comparsion operator, if we want to do so, we have to compare elements of both arrays individualy
+13)Array is always pass by address as teh function argument i.e. we cannot pass an entire array as an argument to a function, we pass its base address
+14)Array can be accessed using a pointer variable
+15)Array can be declared as member of a class
+16)c++ supports multi dimensional array
+17)In two d arrsy first set of bracket represent rows and second represents column
+18)At the time of initialization of md arrays, it is an error to omit the array size for any dimension other than first
+-----------------------------------------------------------------------------------------------------------------------------------------
+1)c++ doesnt support built in string data type
+2)in c++, there are two kinds of strings that are commonly used
+	a)C style string
+	b)string class in ANSI c++
+3)dealing c strings is complex and inefficient as compared to the string objects of standard string class
+4)The string class provide many constructors and functions for performing operations on the string
+5)we can use relational operators with the string objects for verifing relations between two string objects
+6)getline() function is used to read a line of text from user containing white spaces                getline(cin,string_name)
+7)length() function return length of a string                                                                str.length()
+8)append() function us used to append string to other string                                 str.append(new_str)
+9)assign() function is used to assigns a partial string                                                str.assign(new_str)
+10)at() or get_at() function return the character stored at specified location         str.at(index_no)
+11)empty() function is used to check whether a string object is empty or not. return true if empty. str.empty()
+12)erase() function is used to remove characters from string object		str.erase(pos,char_count)
+13)find() function is used to find occurrence of a specified substring in a string. str.find(sub_str);
+14)insert() function s used to insert a character at specified location.   str.insert(pos,str)
+15)maxsize() function return maximum possible size of a string object in that system
+16)replace() function replaces a specific character with a given string
+17)resize() function is used to change the size of string as specified
+18)size() function returns number of character in string
+19)swap() function is used to swap a string with other string
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Days1 Important Topics:-	C with classes
+-----------------------------------
+2.cpp:-Biyarne Stroustrap[1979], header files,importance of main(),return 0
+
+https://www.educative.io/edpresso/what-is-the-basic-structure-of-a-c-program
+
+Basic strcuture
+1)Documentation section
+2)Lnking section:-header files
+3)Definition section:-constants and macros
+4)Global declaration Section, user defined functions declaration
+5)Class definition:- data mnembers and member functions
+6)main function section
+7)Defining user defined functions
+
+
+3.cpp:- 
+HLL vs LLL
+Variables
+Comments
+
+4.cpp:- 
+Scope,Local vs Global,kinds of data types
+
+
+5.cpp:-
+Rules to declare a variable
+
+
+6.cpp:-
+stream, input stream, op stream, operators
+
+8.cpp:- typecasting. 	int b = static_cast<int>(f);
+
+13.cpp:- control structures,loops
+------------------------------------------------------------------------------------
+manipulators:-
+->Escape sequences
+->boolalpha,noboolalpha[used to print true, false]
+->hex,oct,dec
+->showbase
+->noshowbase
+->showpos
+->noshowpos
+->uppercase
+->nouppercase
+->setw(5)
+->setfill('*')
+->left
+->right
+->left,right,fill work only if we have some width
+->printing default format of float data type[only six digits,precision means tota digits except digits after e,no trailng zeroes,if before decimal there are more than 6 digits power format is usual]
+(if in exponential form, 123e+2 op is 12300), rounded off
+->manipulating default format:- 
+a)setprecision(n)
+b)showpoint:-shows trailing zeroes whether they are present or not[no show point]
+c)showpos():-shows +ve symbol for +ve numbers[noshowpos]
+d)uppercase:-prints e as E[nouppercase]
+->floating point[fixed and scientific]:-[default precision is 6]
+a)precision means digits after decimal
+b)if there are no enough digits, then trailing zeroes are shown in both
+c)fixed, scientific, defaultfloat
+d)in fixed format we never prints e but in scientific format e is printed. remaining rules are same 
+e)we can change precision
+f)truncate happens
+------------------------------
+A namespace is a declarative region that provides a scope to the identifiers 
+(the names of types, functions, variables, etc) inside it. Namespaces are used to organize code into 
+logical groups and to 
+prevent name collisions that can occur especially when your code base includes multiple libraries

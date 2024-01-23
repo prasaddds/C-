@@ -1,0 +1,82 @@
+2.cpp:-pointers
+3.cpp:-arrays and pointers
+a)*(p++)//value is printed, then pointer will move by one step forward
+b)*(++p)//pointer will forward by one step and hen value is printed
+c)*p=*p+2//changes the value ,+,-,*,/,% were allowed
+d)*(p+1)//no change in pointer but value at that position willl be prined
+e)p=p+1//moves pointer +,-, are allowed
+4.cpp:-
+---------------------------------------------------------------------------
+11)simple structure
+12)nested structure
+13)array variables inside structure[array within structure]
+14)pointers inside main function
+15)pointers inside main function
+16)Compact form of structure[tag is optional and structure varibles will be before comma]
+17)we have a scope to declare structure variables inside main if we give tag name
+---------------------------------------------------------------------------
+the member names within a particular structure must be distinct from one another
+member name can be same as the name of a variable defined outside the structure
+structure variab;es can be inside main function/before  ; [tag is optional in t5his case]
+scope of structure is restricted to that function if it is declared inside function
+----------------------------------------------------------------------------------
+18)we can assign structure variable directly to other structure varable if data types in both structures were same
+we cannot compare structures but we can assign. we can copare individual members of a structure
+19)array of structures
+20)
+------------------------------------------------------------------------------
+typedef:-user can define his own data type using typedef
+21)typedef basic
+22)typedef(giving values without using . operator)
+23)
+24)parameter passing in a function as structures
+25)we can return structure from function 
+->Direct arithemetic operations  is not possible with structure variables
+---------------------------------------------------------------------------------
+functions:-arguments,formal arguments
+if function prototype is not there, we have to give function definition before using that function in main
+->int sum(int,int);//acceptable
+->void g(void);//acceptable
+->actual parameters(in main function)
+->formal parameters(in function efinition)
+------------------------------------------------------------------------------------
+24)call by value, call by reference using pointers
+25)call by reference using references
+------------------------------------------------------------------------------
+27)inline:- 
+generally in functions values of actual parameters will be copied to formal parameters every time we call
+that function. But in case of inline, there is no need of it.
+->function call  is replaced by function definition, so to avoid copying every time
+->inline is used to overcome overhead in functions
+->static variable intialized only once
+--------------------------------------------------------------------------------------
+28)defualt arguments:-if value for arguments are not coming from function, then default arguments will be used
+else actual values will be used
+29)constant arguments:-
+---------------------------------------------------------------------------------
+30)Function overloading
+31)oops:-watch other video after completion of this course
+----------------------------------------------------------------------------
+pointers:-following are illegal
+->&123;
+->&arr;
+->&(a+b);
+*->indirection operator
+*p->vlue of a variable
+-----------------------------------------------------------------------
+enum:-
+26)25)
+Enumerated data type is a user defined type which is used to assign names to integral constatnts coz, 
+names are easier to handle in program.
+if we donot assign values to enu m names the, automatically compiler will assign values to them starting from 0
+need of enumeration:- 
+1)enum can be declared in the local scope
+2)enum names are automatically initiallized by the compiler
+truths:-
+two or more names can have same value
+we can assign values in any order. all unassigned names will get value of previous name+1
+only integral values are allowed
+all enum constant must be unique  in their scope
+------------------------------------------------------------------------------
+27)passing structure to a function
+28)return values from function

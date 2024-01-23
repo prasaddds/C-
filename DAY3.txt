@@ -1,0 +1,168 @@
+15,18,21
+Paramterized Constructor:-
+	complex a(4,6);//implicit call
+	complex b=complex(5,7);//explicit call
+
+
+1)private data members and member functions can be accessed within a class but cannot be accessed outside the class(). They can be accessed outside the class i.e,in main function by declaring them inside class and defining outside class. In this way we can access data members inside functions.
+2)Data members are by default private. 
+3)In structures there is no privacy to data. But In c++, there is a concept of classes, which helps in data security
+4)Private member functions can be acceesed inside public functions of those which are declared inside class but defined outside the class
+5)We can declare private member functions inside class and we can define them outside the class
+6)Data members inside class should be variables, arrays, pointers, classs itself............same as structure
+7)void className :: FunctionName()
+8)static variables can intitilized only once. If we want to initialize them we have to do outside class using above syntax. DV is 0
+9)we cannot access non static data members inside static functions. static void display(){}
+10)object is not necessary to call static function. We can call it with object also. className :: functionName()
+Objects can be passed as an arguments
+11)Friend Function 
+	a)friend return_type function_name(complex o1,complex o2);//should be in class from where we are accessing private members
+	means that non member - sumcomplex function is allowd to do anything with private data mambers
+	---------------------------------------
+	friend data_type function_name();	
+	----------------------------------------
+	class_name function_name();//syntax of friend function outside class
+	-----------------------------------------
+	b)since it is not in the scope of the cl;ass, it cannot be called from the object of that class. c1.sumcomplex() is not allowd
+	c)can be invoked without the help of any object
+	d)usually contains  objects as arguments
+	e)can be declared inside private or public section of class
+	f)cannot access the members directly by their name and need objcet_name.member_name to access any member
+12)How to access private member of a class in other class function??10_.cpp 15.cpp
+13)18.cpp 20.cpp 
+14)Swapping values using Friend function
+15)Constructors
+
+--------------------------------------------
+To make a function that is declared outside the class “friendly” to that class, we have to declare the function as a friend function, as seen below: and in this scope resolution is not necessary
+
+class className
+{
+  friend returnType functionName(arg list);
+};
+returnType functionName(arg list)
+{
+	------------
+}
+----------------------------------------
+A friend class can have access to the data members and functions of another class in which it is declared as a friend. 
+They are used in situations where we want a certain class to have access to another class’s private and protected members.In this case scope resolution is used because, we are making functions of class P
+to access data members of class P
+
+class S; //forward declaration
+
+class P{
+  // Other Declarations
+  friend class S;
+};
+
+class S{
+  // Declarations
+};
+-------------------------------------------
+1)A class is a blue print from which objects are created.class contains data members to store data and member function to operate on data
+2)class is a group of objects having similar properties
+3)class doesnot actually define any data, but it actually does define, what an object of the class consists of and what operations can be performed on such object
+4)Idea of classes is the extension of structure concept c
+5)class is a user defined data type
+6)keyword class is used to declare class
+7)The functions of class are known as member functions and member of data are known as data members
+8)In c++, members of data are private by default
+9)we can define all member functions inside as well as outside the class
+10)In c++ class definciton must be terminated with semi colon
+11)An objet s an instance of a class. Basically it is a real world implementation of the class having all those properties and data that are defined or structured inside the class
+12)The objects of same class have same data members but may have different values for a particular value
+13)The memory space for object is allocated when tjey are created
+14)The memory space for data members are allocated speratey for each object, but no eperate memory is allocated for the member functions
+15)we can access members of a class by using dot operator along with the object of that class
+16)we can declare an array of objects
+17)objects can be passed as function arguments
+18)An object can be return by a function
+19)we can copy data of one object to the data of same class using assignment operatr
+20)Access specifiers define the visibility and accessibility of the members of a class
+21)member functions declared inside a class are inline functins by default
+22)Private members of  a class are accessible only from the other members of the same class within the class
+23)protected members are accessible from members of theri same class and from members of their derived class
+24)public members are accessed anywhere
+25)we can declare data members and member functions of a class as static
+26)A const member function is a function that cannot modify or alter any data of a class member
+27)Friend function is a function with the helpof which we can access private members of a class
+28)static data members of a class are also known as static members
+29)c++ supports local classes
+30)A local class can use global and static variables declared inside function or blockbut cannot use local or automatic variables
+31)local functions cannot have static data members
+32)the member function of a class must be defined inside the local class
+33)we can create pointer to object class
+34)class provides data hiding
+35)c++ supports nested class
+36)An abstract class is a class whose object cannot be craeted
+37)an abstract class is a class which have only one pure virtual function
+38)a derived class can never be made an abstract class
+-----------------------------------------
+1)we can directly access structure variables and methods, there is no restriction
+2)nesting of member functions[we can access private function through nesting of member functions without 
+creating object for private member function]
+3)memory allocation and  using arrays in classes
+4)static data members and methods :- shares a common variable
+
+a static variable inside a class should be initialized explicitly by the user using the class name and
+scope resolution operator outside the class
+5)6)
+7)Array of objects
+8)
+9)passing objects as function arguments
+10)friend functions:-they allow functions to access private data from outside the class 
+	a)friend return_type function_name(complex o1,complex o2);//should be in class from where we are accessing private members
+	means that non member - sumcomplex function is allowd to do anything with private data mambers
+	---------------------------------------
+	friend data_type function_name();	
+	----------------------------------------
+	class_name function_name();//syntax of friend function outside class
+	-----------------------------------------
+	b)since it is not in the scope of the cl;ass, it cannot be called from the object of that class. c1.sumcomplex() is not allowd
+	c)can be invoked without the help of any object
+	d)usually contains  objects as arguments
+	e)can be declared inside private or public part
+	f)cannot access the members directly by their name and need objcet_name.member_name to access any member
+11)def accessing abc private members
+
+
+class abc;//class name  from which[def] we wanna access private data members
+class def
+{//this is the class in which we declared a function which access private members from abc};
+class abc{give datamembers,memberfunctons and below syntax};
+
+---------------------------------------------------------------------
+friend int abc::sumRealcomplex(complex o1,complex o2); //allow sumRealComplex from abcclass to use data members from 
+this should be a class from which we wanna access private members
+---------------------------------------------------------------------------
+function syntax:-
+int def::function_name(complex o1,complex o2)
+
+{
+	return o1.a+o2.a;
+}
+15)friend class def; //makeing whole class as friend
+-------------------------------------------------------------------------------
+16-20:-friend functions
+22)constructor
+
+	creating constructor
+	constructor is a special member function with same name as the class.
+	it is used to initialize the objects of its class
+	automatically invoked when object is created
+	no return type.
+	this is default constructor coz, it is not taking any parameters
+	should be in public 
+	constructor can have default arguments
+	we cannot refer to their addresses
+
+23)Parameterized constructor:-
+
+	complex a(4,6);//implicit call
+	complex b=complex(5,7);//explicit call
+	a.printNumber();
+	b.printNumber();
+
+23)default constructor
+24)
